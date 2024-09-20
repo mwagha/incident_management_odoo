@@ -1,0 +1,72 @@
+<odoo>
+    <data noupdate="1">
+        <record forcecreate="False" id="incident_type_1" model="incident.type">
+            <field name="name">Testing</field>
+        </record>
+        <record forcecreate="False" id="incident_type_2" model="incident.type">
+            <field name="name">Communication</field>
+        </record>
+        <record forcecreate="False" id="incident_type_3" model="incident.type">
+            <field name="name">Suggestion</field>
+        </record>
+        <record forcecreate="False" id="incident_type_4" model="incident.type">
+            <field name="name">Bug/Issue</field>
+        </record>
+        <record forcecreate="False" id="incident_type_5" model="incident.type">
+            <field name="name">Tickets</field>
+        </record>
+
+        <record model="team.incident" id="team_incident_1">
+            <field name="name">Test demo</field>
+            <field name="involved_user_id" ref="project_advance_team.user_1"/>
+            <field name="team_id" ref="project_advance_team.project_team_2"/>
+            <field name="create_uid" ref="project_advance_team.user_3"/>
+            <field name="incident_type" ref="incident_type_1"/>
+        </record>
+
+        <record model="team.incident" id="team_incident_2">
+            <field name="name">Ticket 073774</field>
+            <field name="involved_user_id" ref="project_advance_team.user_2"/>
+            <field name="team_id" ref="project_advance_team.project_team_3"/>
+            <field name="create_uid" ref="project_advance_team.user_4"/>
+            <field name="incident_type" ref="incident_type_5"/>
+            <field name="attention_type">reported</field>
+        </record>
+
+        <record model="team.incident" id="team_incident_3">
+            <field name="name">Ticket 89732</field>
+            <field name="involved_user_id" ref="project_advance_team.user_1"/>
+            <field name="team_id" ref="project_advance_team.project_team_2"/>
+            <field name="create_uid" ref="project_advance_team.user_3"/>
+            <field name="incident_type" ref="incident_type_5"/>
+            <field name="state">resolved</field>
+        </record>
+
+        <record model="team.incident" id="team_incident_4">
+            <field name="name">New Theme</field>
+            <field name="involved_user_id" ref="project_advance_team.user_1"/>
+            <field name="team_id" ref="project_advance_team.project_team_2"/>
+            <field name="create_uid" ref="project_advance_team.user_3"/>
+            <field name="incident_type" ref="incident_type_3"/>
+            <field name="state">cancelled</field>
+        </record>
+
+        <record model="team.incident" id="team_incident_5">
+            <field name="name">Issue 9384</field>
+            <field name="involved_user_id" ref="project_advance_team.user_2"/>
+            <field name="team_id" ref="project_advance_team.project_team_3"/>
+            <field name="create_uid" ref="project_advance_team.user_4"/>
+            <field name="incident_type" ref="incident_type_4"/>
+            <field name="attention_type">reported</field>
+        </record>
+
+        <record model="team.incident" id="team_incident_6">
+            <field name="name">Sent Email</field>
+            <field name="involved_user_id" ref="project_advance_team.user_2"/>
+            <field name="team_id" ref="project_advance_team.project_team_3"/>
+            <field name="create_uid" ref="project_advance_team.user_4"/>
+            <field name="incident_type" ref="incident_type_2"/>
+        </record>
+
+    </data>
+</odoo>
